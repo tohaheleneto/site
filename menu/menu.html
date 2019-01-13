@@ -1,0 +1,61 @@
+<head>
+
+	<meta charset="utf-8">
+	<link href="menu/menu.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.sub > a').click(function(){
+			  $('.sub ul').slideUp();
+			   if ($(this).next().is(":visible")){
+				   $(this).next().slideUp();
+			   } else {
+			   $(this).next().slideToggle();
+			   }
+			  return false;
+			});
+			   $('.mini-menu > ul > li > a').click(function(){
+			   $('.mini-menu > ul > li > a, .sub a').removeClass('active');
+			   $(this).addClass('active');
+			}),
+			   $('.sub ul li a').click(function(){
+			   $('.sub ul li a').removeClass('active');
+			   $(this).addClass('active');
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+
+
+    
+	<div class="mini-menu">
+		<ul>
+			<li class="sub">
+				<a href="#">Алгоритмы</a>
+				<ul>
+				   <li><a href="sort.php">Сортировка</a></li>
+				   <li><a href="binarysearch.php">Бинарный поиск</a></li>
+
+				</ul>
+			</li>
+			<li class="sub">
+				<a href="#">Структуры данных</a>
+				<ul>
+				   <li><a href="structoperation.php">Операции над структурами данных</a></li>
+				   <li><a href="array.php">Массив</a></li>
+				   <li><a href="stack.php">Стек</a></li>
+				   <li><a href="vector.php">Вектор</a></li>
+
+				</ul>
+			</li>
+
+
+		</ul>
+	</div>
+   
+	
+
+</body>

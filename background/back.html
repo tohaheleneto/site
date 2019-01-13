@@ -1,0 +1,24 @@
+<head>
+	<link href="/background/back.css" rel="stylesheet">
+	<script type="text/javascript">
+ 
+   var v = document.getElementById("movie");
+   v.onclick = function() {
+    if (v.paused) {
+     v.play();
+    } else {
+     v.pause();
+    }
+   };
+  </script>
+
+</head>
+<body>
+	<div id="trailer" class="is_overlay">
+		<video id="video" width="100%" height="auto" muted autoplay loop preload="auto">
+			<source src="/background/video/v.mp4"></source>
+			
+		</video>
+	</div>
+
+</body>
